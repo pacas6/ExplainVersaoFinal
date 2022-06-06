@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+:root{
+
+    --main-color1: #ff7f50;
+    --main-color2: #1d2231;
+    --main-colo3: #8390a2;
+}
+
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar{
+
+    width: 345px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--main-color1);
+    z-index: 100%;
+    transition: width 300ms;
+}
+
+.Main-content{
+
+    margin-left: 345px;
+    transition: margin-left 300ms;
+}
+
+.sidebar-brand span{
+
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+.sidebar-menu li{
+
+    width: 100%;
+    margin-bottom: 1.7rem;
+    padding-left: 1rem;
+}
+
+.sidebar-menu a{
+
+    padding-left: 1rem;
+    display: block;
+    color: #fff;
+    font-size: 1.1rem;
+
+}
+
+.sidebar-menu a.active{
+
+    background: #fff;
+    padding-top: 1rem ;
+    padding-bottom: 1rem;
+    color: var(--main-color);
+    border-radius: 30px 0px 0px 30px;
+
+}
+
+.sidebar-menu a span :first-child{
+
+    font-size: 1.5rem;
+    padding-right: 1rem;
+
+}
+
+#nav-toggle:checked + .sidebar{
+
+    width: 70px;
+}
+
+#nav-toggle:checked + .sidebar .sidebar-brand,
+#nav-toggle:checked + .sidebar li{
+
+    padding-left: 1rem;
+    text-align: center;
+}
+
+#nav-toggle:checked + .sidebar li a{
+
+    padding-left: 0rem;
+}
+
+#nav-toggle:checked + .sidebar .sidebar-brand h2 span:last-child,
+#nav-toggle:checked + .sidebar li a span:last-child{
+
+   display: none;
+}
+
+#nav-toggle:checked ~ .Main-content{
+
+    margin-left: 70px;
+}
+
+#nav-toggle:checked ~ .Main-content header{
+
+    width: calc(100% - 70px);
+    left: 70px;
+}
+
+
+
+.sidebar-menu {
+
+    margin-top: 1rem;
+
+}
+
+.sidebar-brand{
+
+    height: 90px;
+    padding: 1rem 0rem 1rem 2rem;
+    color: #fff;
+}
+
+header{
+    
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    left: 345px;
+    width: calc(100% - 345px);
+    top: 0;
+    z-index: 100;
+    transition: left 300ms;
+    
+}
+
+#nav-toggle{
+
+    display: none;
+}
+
+header h2{
+
+    color: #222;
+}
+
+header label span{
+
+    font-size: 1.7rem;
+    padding-right: 1rem;
+
+
+}
+
+.search-wrapper{
+
+
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.search-wrapper input{
+
+    height: 100%;
+    padding: .5rem;
+    border: none;
+    outline: none;
+}
+
+.search-wrapper span{
+    display: inline-block;
+    padding:  0rem 1rem;
+    font-size: 1.5rem
+}
+
+
+.user-wrapper{
+
+    display: flex;
+    align-items: center;
+}
+
+.user-wrapper img{
+
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.user-wrapper small{
+
+    display: inline-block;
+    color: var(--main-color2);
+    margin-top: -10px;
+}
+
+main{
+
+    margin-top: 89px;
+    padding: 2rem 1.5rem;
+    background: #f1f5f9;
+    min-height: calc(100vh - 90px);
+
+}
+
+.cards{
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    margin-top: 1rem;
+}
+
+.card-single{
+
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.card-single div:last-child span{
+
+    font-size: 3rem;
+    color: var(--main-color1);
+}
+
+.card-single div:first-child span{
+
+    color: var(--main-colo3);
+}
+
+.card-single:last-child{
+
+    background: var(--main-color1);
+}
+
+
+.card-single:last-child h1,
+.card-single:last-child div:first-child span,
+.card-single:last-child div:last-child span{
+
+    color: #fff;
+}
+
+.recent-grid{
+
+    margin-top: 3.5rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 65% auto;
+}
+
+.card{
+
+
+    background: #fff;
+    border-radius: 5px;
+
+}
+
+.card-header{
+
+    padding: 1rem;
+}
+
+.card-header{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.card-header button{
+
+    background: var(--main-color1);
+    border-radius: 10px;
+    color: #fff;
+    font-size: .8rem;
+    padding: .5rem 1rem;
+    border: 1px solid var(--main-color1);
+}
+
+table{
+
+    border-collapse: collapse;
+}
+
+thead tr{
+
+    border: 1px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+thead{
+
+    font-weight: 700;
+}
+
+td{
+
+    padding: .5rem 1rem;
+    font-size: .9rem;
+    color: var(#222);
+   
+}
+
+tr td:last-child{
+
+    display: flex;
+    align-items: center;
+
+}
+
+td .status{
+
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-right: 1rem;
+
+}
+
+.status.purple{
+
+    background: rebeccapurple;
+
+}
+
+.status.pink{
+    background: pink;
+}
+
+.status.orange{
+
+    background: orange;
+}
+
+.table-responsive{
+
+    width: 100%;
+    overflow-x: auto;
+
+}
+
+.Customer{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem .7rem;
+}
+
+.info{
+
+    display: flex;
+    align-items: center;
+
+}
+
+.info img{
+
+    border-radius: 50%;
+    margin-right: 1rem;
+
+}
+
+.info h4 {
+
+    font-size: .8rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.info small{
+
+    font-weight: 600;
+    color: var(--main-colo3);
+}
+
+.contact span{
+
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-left: .5rem;
+    color: var(--main-color1);
+}
+
+.LandPagePagina{
+
+    display: inline-block;
+}
+
+.LandPagePagina img{
+
+    width: 200px;
+    height: 140px;
+    border-radius: 20px;
+    box-shadow: 20px 50px 100px coral;
+    margin-left: 40px;
+}
+
+.IconsList img{
+
+    width: 70px;
+    margin-left: 40px;
+    box-shadow: 20px 50px 100px coral;
+    background: none;
+    border-radius: 10px;
+    margin-bottom: 70px;
+}
+
+.IconsList{
+
+    display: inline-block;
+}
+
+.Valores{
+
+   display: inline-block;
+   width: 800px;
+   height: 130px;
+   background: white;
+   border-radius: 20px;
+   position: relative;
+}
+
+.Valores div{
+
+    margin-top: 40px;
+    margin-left: 115px;
+    font-size: 10px;
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.Valores p{
+
+
+    font-size: 30px;
+    margin-top: 10px;
+    padding-left: 1.7rem;
+}
+
+.PayMentsList{
+
+    margin-top: 40px;
+    background: white;
+    border-radius: 20px;
+    width: 860px;
+}
+
+.Tabela-Resposiva {
+
+    margin-top: 0px;
+    background: white;
+    border-radius: 20px;
+
+}
+
+.Tabela-Resposiva td{
+
+    padding: .5rem 2.5rem;
+}
+
+.PayListheader h3{
+
+    text-align: center;
+}
+
+.PayListheader p{
+
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 7px;
+}
+
+.PaySettingsOptions{
+
+    background: white;
+    width: 270px;
+    height: 150px;
+    border-radius: 20px;
+}
+
+.PaySettingsText p{
+
+    padding-top: 20px;
+    margin-left: 30px;
+    
+}
+
+.PaySettingsText p:hover{
+
+    color: coral;
+
+}
+
+.ModoPagamentoBox{
+
+
+    background: white;
+    width: 700px;
+    height: 270px;
+    position: absolute;
+    margin-left: 300px;
+    border-radius: 20px;
+    margin-top: -150px;
+}
+
+.ModoPagamentoBox h2{
+
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 30px;
+
+}
+
+.ModoPagamentoBox p{
+
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.MetodoDepagamentoAdd{
+
+    background: whitesmoke;
+    width: 650px;
+    height: 80px;
+    margin-top: 40px;
+    margin-left: 20px;
+    border-radius: 10px;
+    
+}
+
+
+.MetodoDepagamentoAdd img{
+
+    width: 50px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-top: 12px;
+}
+
+
+.MetodoDepagamentoAdd strong{
+
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 20px;
+    color: black;
+}
+
+.MetodoDepagamentoAdd .PlusPhoto {
+
+   position: absolute;
+   margin-left: 500px;
+   margin-top: 15px;
+}
+
+.MetodoDePagamentoBox2{
+
+    background: white;
+    width: 700px;
+    height: 270px;
+    position: absolute;
+    margin-left: 300px;
+    border-radius: 20px;
+    margin-top: -150px;
+    visibility: hidden;
+
+}
+
+.MetodoDePagamentoAdd2 .PlusPhoto {
+
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 15px;
+ }
+
+ .MetodoDePagamentoAdd2 strong{
+
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 20px;
+    color: black;
+}
+
+.MetodoDePagamentoAdd2 img{
+
+    width: 50px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-top: 12px;
+}
+
+.MetodoDePagamentoBox2 h2{
+
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 30px;
+
+}
+
+.MetodoDePagamentoBox2 p{
+
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+
+
+.MetodoDePagamentoBox3{
+
+    background: white;
+    width: 700px;
+    height: 550px;
+    position: absolute;
+    margin-left: 300px;
+    border-radius: 20px;
+    margin-top: -150px;
+    visibility: hidden;
+
+}
+
+.MetodoDePagamentoBox3 h2{
+
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 30px;
+
+}
+
+.MetodoDePagamentoBox3 p{
+
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.MetodoDepagamentoAdd3 .PlusPhoto{
+
+    width: 50px;
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 130px;
+}
+
+.MetodoDepagamentoAdd3 .minusPhoto{
+
+    width: 50px;
+    position: absolute;
+    margin-left: 150px;
+    margin-top: 130px;
+}
+
+.MetodoDepagamentoAdd3 strong{
+
+    font-size: 30px;
+    position: absolute;
+    margin-top: 130px;
+    margin-left: 315px;
+}
+
+.MetodoDePagamentoBox3 .PercentageButton{
+
+    
+    margin-top: 300px;
+    margin-left: 245px;
+    width: 200px;
+    border-radius: 20px;
+    height: 40px;
+    border-style: none;
+    background-color: coral;
+    
+}
+
+#CardValue, #CardValue2{
+
+    font-size: 18px;
+}

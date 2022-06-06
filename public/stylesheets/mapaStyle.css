@@ -1,0 +1,36 @@
+
+#map{
+
+    height: 45rem;
+    width: 100%;
+}
+
+#location_input{
+
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 400px;
+    margin-top: 14px;
+    height: 30px;
+    border-radius: 10px;
+    border-style: double;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-color: coral;
+
+}
+
+.button-locatiion{
+
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+    background-color: coral;
+    border-style: none;
+    size: 50px;
+}
+

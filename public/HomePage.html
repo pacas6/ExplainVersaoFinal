@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explain Me!</title>
+
+    <link rel="stylesheet" href="stylesheets/HomePageStyle.css">
+
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito+Sans:ital,wght@1,800&display=swap" rel="stylesheet">
+
+    <script src="javascripts/register.js"></script>
+
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+      type="text/javascript"
+    ></script>
+
+    <script src="javascripts/LoginRegisterInteraction.js"></script>
+
+    <script src="javascripts/login.js"></script>
+    <script src="javascripts/usersCount.js"></script>
+
+</head>
+<body>
+
+    <div class="mainInfo">
+
+        <header class="maininfoHeader">
+
+            <div class="contentor">
+
+                <nav class="nav">
+
+                    <a href="">
+    
+                        <img src="images/ImagensGeralProject/iconSemFundo.png" alt="explain me Logo" class="HomeImage">
+        
+                    </a>
+
+                    <p class="LogoLetter">Explain me!</p>
+    
+                    <ul class="nav_itens">
+    
+                        <li>
+                            <a href="">Para Alunos</a>
+                            
+                        </li>
+        
+                        <li>
+        
+                            <a href="">Para explicadores</a>
+                            
+                        </li>
+        
+                        <li>
+
+                            <a href="">Ajuda</a>
+        
+                        </li>
+        
+                        <li>
+
+                            <a href="explicadoresPage.html">Encontra um explicador</a>
+                            
+                        </li>
+
+        
+                    </ul>
+    
+                    <input type="button" class="SigninButton" id="Signin_btn" value="Login" onclick="showLoginCard()">
+    
+                    <a href="./RegisterPage.html">
+
+                        <input type="button" value="Register" class="registerButton" id="register_btn">
+                        
+                    </a>
+                    
+    
+                </nav>
+
+            </div>
+
+        </header>
+
+        <div class="InformationIntroDiv">
+
+            <div class="InformationAndSearchBar">
+
+                <h1>
+
+                    Encontra o professor <br>
+                    perfeito!
+                </h1>
+    
+                <p>
+                    Seja Online ou presencial, 
+                    tira as tuas duvidas <br> no horario e modalidade 
+                    que mais se adequam a ti, <br>
+                    aqui encontrarás professores qualificados que te podem <br> ajudar  com as tuas questões.
+                </p>
+    
+                <div class="SearchBarSize">
+    
+                    <img src="images/ImagensGeralProject/book-solid.svg" alt="" class="BookPhoto">
+    
+                    <input type="text" placeholder="O que deseja aprender ?" class="txt1">
+    
+                    <img src="images/ImagensGeralProject/map-marker-solid.svg" alt="" class="MapMarker">
+                    <input type="text" placeholder="Local da aula" class="txt2">
+    
+                    <input type="button" value="Pesquisar" class="PesquisarButton">
+    
+                </div>
+                
+            </div>
+
+        </div>
+
+        <img src="images/ImagensGeralProject/students.svg" alt="students" class="IntroImage">
+
+    </div>
+
+    <div class="BackGroundCard" id="BackGroundCard">
+
+        <div class="LoginCard" id="LoginCard">
+
+            <h2>Iniciar Sessão</h2>
+    
+            <div class="Fields">
+    
+                <input type="text" class="InputLogin_1" id="emailLogin" placeholder="Endereço de Email">
+    
+                <input type="text" class="InputPassword_2" id="passwordLogin" placeholder="Senha">
+    
+                <input type="button" class="LoginButtonCard" id="LoginButtonOnCarding" value="Iniciar sessão" onclick="login()">
+    
+                <p class="nãoTensUmaCoisa">
+    
+                    Não tens uma conta ?
+                </p>
+    
+                <input type="button" value="Inscreve-te" class="Inscreva-se" id="Inscreva-se_btn">
+
+            </div>
+
+            <img src="images/ImagensGeralProject/times-solid.svg" alt="" onclick="hideCardAndBackGround()" class="OutButton">
+             
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dash Board</title>
+
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+      type="text/javascript"
+    ></script>
+
+    <link rel="stylesheet" href="stylesheets/anouncesStyle.css">
+
+    <script src="javascripts/geoinfoAddress.js"></script>
+
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjRRLN46O3HGVXBx-4YoqH385krT3Bd0s&libraries=places&callback=showMapAddress">
+    </script>
+
+    <script src="javascripts/anounceInfo.js"></script>
+
+</head>
+<body>
+
+    <input type="checkbox" id="nav-toggle" title="ei">
+
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2>
+                <span class="lab la-accusoft"></span> <span>Explain Me!</span></h2>
+        </div>
+
+        <div class="sidebar-menu">
+
+            <ul>
+                <li>
+                    <a href="DashBoard.html"><span class="las la-home"></span>
+                    <span>Dashboard</span></a>
+    
+                </li>
+    
+                <li>
+                    <a href="DashBoardPages.html" id="a1"><span class="las la-code"></span><span>Pages</span></a>
+                    
+                </li>
+    
+                <li>
+                    <a href="" id="a2"><span class="las la-folder-open"></span><span>File manager</span></a>
+    
+                </li>
+    
+                <li>
+                    <a href="IconsPage.html" id="a3"><span class="las la-icons"></span><span>Icons</span></a>
+    
+                </li>
+    
+                <li>
+                    <a href="DashBoardRecepit.html" id="a4"><span class="las la-receipt"></span><span>Recibos</span></a>
+    
+                </li>
+    
+                <li>
+                    <a href="DashBoardPaymentPage.html" id="a5"><span class="las la-shopping-cart"></span><span>Pagamentos</span></a>
+    
+                </li>
+    
+                <li>
+                    <a href="DashBoardAnouncesPage.html" class="active" id="a6"><span class="las la-id-card" ></span><span>Anuncios</span></a>
+    
+                </li>
+    
+                
+
+                    <li>
+                    <a href="" id="a7"><span class="las la-award"></span><span>Ranks</span></a>
+    
+                </li>
+
+                </li>
+    
+                
+
+                    <li>
+                    <a href="" id="a8"><span class="las la-chart-line" ></span><span>Requisitos</span></a>
+    
+                </li>
+    
+                <li>
+                    <a href="DashBoardMaps.html" id="a9"><span class="las la-map" id="a6"></span><span>Mapas</span></a>
+    
+                </li>
+
+                <li>
+                    <a href="" id="a10"><span class="las la-chalkboard-teacher" ></span><span>Aulas confirmadas</span></a>
+    
+                </li>
+
+                <li>
+                    <a href="" id="a11"><span class="las la-calendar-week" ></span><span>Pedidos</span></a>
+    
+                </li>
+
+
+                
+            </ul>
+    
+        </div>
+    </div>
+
+
+    <div class="Main-content">
+        <header>
+                <h2>
+                    <label for="nav-toggle">
+                        <span class="las la-bars"></span>
+                    </label>
+
+                    Anuncio
+                </h2>
+
+                <div class="search-wrapper">
+                    <span class="las la-search"></span>
+                    <input type="search" placeholder="O que deseja aprender">
+                </div>
+
+            <div class="user-wrapper">
+                <img src="images/DashBoardImagens/pngkey.com-face-profile-png-3919742.png" alt="" width="50">
+
+                <div>
+                    <h4 id="Name-Profile-show"></h4>
+                    <small id="estatuto-show"></small>
+                </div>
+
+            </div>
+
+        </header>
+
+        <main class="PagesMain">
+
+           
+            <div class="div-right">
+
+                    <h5 class="informacoes-gerais">Informações Gerais</h5>
+
+                    <form class="formulario">
+
+                        <input type="text" id="gender-box" >
+
+                        <input type="text" id="name-box" placeholder="">
+
+                        <input type="text" id="apelido-box" placeholder="">
+
+                        <input type="text" id="number-box" placeholder="">
+
+                        <input type="date" id="date-box" placeholder="">
+
+                        <input type="text" id="email-box" placeholder="">
+
+                        <button class="validate-button-2">Validar</button>
+                    </form>
+            </div>
+
+             
+            <div class="div-right-sub">
+
+                <h5>Habilitações Doc</h5>
+
+                <div class="photo-circle">
+
+                    <img src="images/DashBoardImagens/icons8-certification-96.png" alt="" width="110" id="diploma">
+                </div>
+
+                <div class="input-form-2">
+
+                    <input type="file" id="file" class="upload-box-2">
+
+               </div>
+                
+               <button class="validate-button">Validar</button>
+
+            </div>
+
+            <div class="div-meio">
+
+                <h5>Centro de explicação <label > <img src="images/DashBoardImagens/icons8-place-marker-96.png" alt="" width="30px"></label></h5>
+
+                <input type="text" id="location_input_change" placeholder=" " class="map-change-search">
+                <div id="mapAddress"></div>
+
+            </div>
+
+            <div class="div-esquerda">
+            
+               <img src="https://drive.google.com/uc?export=view&id=1SP1BZBv3ZNEeP5xdDv0q2jXmoY0DLbWG" alt="drive" class="Img-avatar">
+
+               <div class="input-form">
+
+                    <input type="file" id="file" class="upload-box">
+
+               </div>
+
+               <button class="validate-button-3" onclick="UploadFile()">Validar</button>
+               
+            </div>
+
+            <div class="div-meio-sub">
+                <h5> Alterar palavra-passe 
+                    <label for=""> <img src="images/DashBoardImagens/icons8-lock-96.png" alt="" width="40px"></label>
+                </h5>
+
+                <form class="formulario-change-password">
+
+                    <input type="text" placeholder="Antiga palavra passe">
+                    <input type="text" placeholder="Nova palavra-passe">
+                    <input type="text" placeholder="Nova palavra-passe">
+                    <button class="validate-button-4">Validar</button>
+                </form>
+                
+            </div>
+
+            <div class="div-esquerda-sub">
+                <h5>Excluir conta</h5>
+                <p>Se confirmar esta opção todos os seus dados serão excluidos esta acção é irreversivel </p>
+
+                <div class="check-delete-radio-form">
+                    <input type="radio"><label for="radio">apagar conta</label>
+
+                </div>
+
+                <button class="validate-button-5">Validar</button>
+            </div>
+
+            <div class="div-meio-sub-2">
+
+                <h5>Informação de anuncio</h5>
+                <input type="text" placeholder="Titulo do anuncio" id="input-title-anounce">
+                <textarea name="" id="description-anounce" cols="60" rows="7" class="text-area-anounce1" placeholder="Apresenta-te aos teus alunos, fala sobre a tua experiencia e jornada "></textarea> 
+                <textarea name="" id="class-method" cols="60" rows="7" class="text-area-anounce2" placeholder="Fala um pouco sobre o teu metodo das aulas"></textarea>
+
+                <input type="button" class="validate-button-6" value="Validar" onclick="createAnounce()">
+
+                <label for="" id="discplina-choose"> 
+
+                    Disciplina: 
+                    <select name="" id="Disciplinas-select">
+
+                        
+
+                    </select> 
+
+                    Preço: <input type="text" placeholder="Preço por hora" id="input-price">
+
+                    
+                </label>
+            </div>
+        
+        </main>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dash Board</title>
+
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <link rel="stylesheet" href="stylesheets/DashBoardStyle.Css">
+
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+      type="text/javascript"
+    ></script>
+
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjRRLN46O3HGVXBx-4YoqH385krT3Bd0s&libraries=places&callback=showGeoExp">
+    </script>
+
+    <link rel="stylesheet" href="./stylesheets/mapaStyle.css">
+    <script src="javascripts/showGeoExp.js"></script>
+    <script src="javascripts/usersCount.js"></script>
+
+</head>
+<body>
+
+    <input type="checkbox" id="nav-toggle" title="ei">
+
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2>
+                <span class="lab la-accusoft"></span> <span>Explain Me!</span></h2>
+        </div>
+
+        <div class="sidebar-menu">
+
+            <ul>
+                <li>
+                    <a href="DashBoard.html"><span class="las la-home"></span>
+                    <span>Dashboard</span></a>
+    
+                </li>
+    
+                <li>
+                    <a href="DashBoardPages.html" id="a1"><span class="las la-code"></span><span>Pages</span></a>
+                    
+                </li>
+    
+                <li>
+                    <a href="" id="a2"><span class="las la-folder-open"></span><span>File manager</span></a>
+    
+                </li>
+    
+                <li>
+                    <a href="IconsPage.html" id="a3"><span class="las la-icons"></span><span>Icons</span></a>
+    
+                </li>
+    
+                <li>
+                    <a href="DashBoardRecepit.html" id="a4"><span class="las la-receipt"></span><span>Recibos</span></a>
+    
+                </li>
+    
+                <li>
+                    <a href="DashBoardPaymentPage.html" id="a5"><span class="las la-shopping-cart"></span><span>Pagamentos</span></a>
+    
+                </li>
+    
+                <li>
+                    <a href="DashBoardAnouncesPage.html" id="a6"><span class="las la-id-card"></span><span>Anuncios</span></a>
+    
+                </li>
+
+                <li>
+                    <a href="" id="a7"><span class="las la-award"></span><span>Ranks</span></a>
+    
+                </li>
+
+                </li>
+    
+                
+                    <li>
+                    <a href="" id="a8"><span class="las la-chart-line"></span><span>Requisitos</span></a>
+    
+                </li>
+    
+                <li>
+                    <a href="" class="active" id="a9"><span class="las la-map"></span><span>Mapas</span></a>
+    
+                </li>
+
+                <li>
+                    <a href="" id="10"><span class="las la-chalkboard-teacher"></span><span>Aulas confirmadas</span></a>
+    
+                </li>
+
+                <li>
+                    <a href="" id="a11"><span class="las la-calendar-week"></span><span>Pedidos</span></a>
+    
+                </li>
+                
+            </ul>
+    
+        </div>
+    </div>
+
+
+    <div class="Main-content">
+        <header>
+                <h2>
+                    <label for="nav-toggle">
+                        <span class="las la-bars"></span>
+                    </label>
+
+                    Dashboard
+                </h2>
+
+                <div class="search-wrapper">
+                    <span class="las la-search"></span>
+                    <input type="search" placeholder="O que deseja aprender">
+                </div>
+
+            <div class="user-wrapper">
+                <img src="./images/DashBoardImagens/pngkey.com-face-profile-png-3919742.png" alt="" width="50">
+
+                <div>
+                    <h4 id="Name-Profile-show"></h4>
+                    <small> Super admin</small>
+                </div>
+
+            </div>
+
+        </header>
+
+        <main class="PagesMain">
+            
+            <input type="text" class="location-input" placeholder="Enter a location" id="location_input">
+
+            <button class="button-locatiion" id="button-location">
+
+                <img src="./images/ImagensGeralProject/compass.svg" alt="">
+            </button>
+
+            <div id="map"></div>
+        </main>
+    </div>
+    
+</body>
+</html>

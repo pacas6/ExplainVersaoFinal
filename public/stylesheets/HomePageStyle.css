@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito+Sans:ital,wght@1,800&display=swap');
+
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+div.mainInfo{
+
+    position: absolute;
+    background-color: coral;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.HomeImage{
+
+    width: 110px;
+    margin-top: -1px;
+    
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color .5s ease;
+    z-index: 1000;
+    border-style: none none inset none;
+    height: 127px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contentor{
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.nav{
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(255,255,255,.05);
+    transition: height .5s ease;
+}
+
+.nav a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.2rem;
+}
+
+.nav .LogoLetter{
+    
+    font-size: 33px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.nav_itens{
+
+    list-style: none;
+    display: flex;
+    margin-right: auto;
+    margin-left: 5.8rem;
+}
+
+.nav_itens li{
+
+    padding: 10px;
+}
+
+.registerButton{
+
+    background-color: whitesmoke;
+    color: coral;
+    padding: 1.6rem 2rem;
+    border-radius: 20px;
+    border-style: none;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.SigninButton{
+
+    border-style: none;
+    background: none;
+    color: whitesmoke;
+    font-size: 1.2rem;
+    padding-right: 20px;
+}
+
+
+
+.SearchBarSize{
+
+    position: absolute;
+    background: whitesmoke;
+    width: 660px;
+    height: 70px;
+    margin-left: 40px;
+    margin-top: 540px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.SearchBarSize .txt1{
+
+    margin-top: 20px;
+    width: 220px;
+    height: 30px;
+    margin-left: 52px;
+    background: whitesmoke;
+    font-size: 14px;
+    position: absolute;
+    border-style: none inset none none;
+    border-color: gray;
+}
+
+.SearchBarSize .txt2{
+
+    position: absolute;
+    margin-top: 20px;
+    width: 160px;
+    height: 30px;
+    margin-left: 318px;
+    background: whitesmoke;
+    border-style: none ;
+    font-size: 14px;
+}
+
+.SearchBarSize .PesquisarButton{
+
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 490px;
+    border-radius: 20px;
+    height: 55px;
+    width: 160px;
+    border-style: none;
+    background: coral;
+    font-weight: 900;
+    color: white;
+    font-size: 16px;
+    box-shadow: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.BookPhoto{
+
+    position: absolute;
+    width: 40px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.MapMarker{
+
+    position: absolute;
+    width: 40px;
+    margin-top: 15px;
+    margin-left: 276px;
+}
+
+.InformationIntroDiv{
+
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.InformationIntroDiv h1{
+
+    position: absolute;
+    margin-top: 150px;
+    text-align: center;
+    color: antiquewhite;
+    font-weight: 900;
+    font-size: 59px;
+    margin-left: 40px;
+    
+}
+
+.InformationIntroDiv p{
+
+    position: absolute;
+    margin-top: 350px;
+    margin-left: 40px;
+    text-align: left;
+    font-size: 21px;
+    color: antiquewhite;
+}
+
+.IntroImage{
+
+    width: 910px;
+    margin-left: 530px;
+}
+
+.BackGroundCard{
+
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    visibility: hidden;
+    
+}
+
+.LoginCard{
+
+    position: fixed;
+    background: whitesmoke;
+    width: 540px;
+    height: 500px;
+    margin-top: 150px;
+    margin-left: 450px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+}
+
+.LoginCard h2{
+
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 185px;
+}
+
+.InputLogin_1{
+
+    position: absolute;
+    margin-top: 120px;
+    width: 300px;
+    height: 50px;
+    background: #cbd2dc;
+    margin-left: 120px;
+    border-radius: 7px;
+    border-style: none;
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.InputPassword_2{
+
+    position: absolute;
+    margin-top: 190px;
+    width: 300px;
+    height: 50px;
+    background: #cbd2dc;
+    margin-left: 120px;
+    border-radius: 7px;
+    border-style: none;
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.LoginButtonCard{
+
+    position: absolute;
+    margin-top: 270px;
+    width: 300px;
+    height: 50px;
+    margin-left: 120px;
+    border-radius: 7px;
+    border-style: none;
+    color: antiquewhite;
+    background-color: coral;
+    font-size: 15px;
+}
+
+.nãoTensUmaCoisa{
+
+    position: absolute;
+    margin-top: 360px;
+    width: 300px;
+    height: 50px;
+    margin-left: 172px;
+    font-size: 17px;
+
+}
+
+.Inscreva-se{
+
+    position: absolute;
+    margin-left: 221px;
+    margin-top: 378px;
+    border-style: none;
+    font-size: 17px;
+    background: whitesmoke;
+    color: coral;
+
+}
+
+.OutButton{
+
+    width: 30px;
+    position: absolute;
+    margin-left: 489px;
+    margin-top: 13px;
+}

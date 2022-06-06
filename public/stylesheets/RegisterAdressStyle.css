@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito+Sans:ital,wght@1,800&display=swap');
+
+
+*{
+
+    font-family: 'Montserrat', sans-serif; 
+    
+}
+
+body{
+
+    background: coral;
+}
+
+.endereco-input{
+
+    position: absolute;
+    background: whitesmoke;
+    width: 300px;
+    height: 40px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 180px;
+    margin-left: 530px;
+}
+
+.Cidade-input{
+
+    position: absolute;
+    background: whitesmoke;
+    width: 300px;
+    height: 40px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 240px;
+    margin-left: 530px;
+}
+
+.zip-code-input{
+
+    position: absolute;
+    background: whitesmoke;
+    width: 190px;
+    height: 40px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 300px;
+    margin-left: 640px;
+}
+
+.pais-input{
+
+    position: absolute;
+    background: whitesmoke;
+    width: 100px;
+    height: 40px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 300px;
+    margin-left: 530px;
+}
+
+.button-Continuar{
+
+    position: absolute;
+    width: 230px;
+    height: 68px;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background: white;
+    color: coral;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 390px;
+    margin-left: 564px;
+
+}
+
+.AdressContainer{
+
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+.adress-title{
+    position: absolute;
+    font-size: 35px;
+    color: whitesmoke;
+    margin-top: 110px;
+    margin-left: 610px;
+}
+
+.Logo{
+
+    position: absolute;
+    width: 130px;
+    margin-left: 500px;
+    margin-top: -30px;
+}
+
+.LogoLetter{
+
+
+    position: absolute;
+    color: whitesmoke;
+    font-size: 30px;
+    margin-left: 630px;
+    margin-top: 20px;
+}

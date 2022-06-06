@@ -1,0 +1,546 @@
+create table utilizador(
+
+	user_id serial not null unique,
+	nome varchar(100) not null,
+	apelido varchar(100) not null,
+	genero char(1) not null,
+	birthday date not null,
+	email varchar(80) unique not null,
+	telefone varchar(50) not null unique,
+	password varchar(180) not null,
+	type int not null,
+	primary key(user_id)
+);
+
+select * from utilizador
+
+create table rank(
+
+	rank_id serial not null unique,
+	estatuto varchar (60) not null,
+	primary key(rank_id)
+);
+
+create table explicador(
+
+	explicador_id serial not null unique,
+	fk_utilizador_id int not null,
+	fk_rank_id int not null,
+	foreign key(fk_utilizador_id) references utilizador(user_id),
+	foreign key(fk_rank_id) references rank(rank_id),
+	primary key(explicador_id)
+);
+
+create table pais(
+
+	pais_id serial not null unique,
+	pais varchar(70) not null,
+	primary key(pais_id)
+);
+
+create table morada(
+
+	morada_id serial not null unique,
+	endereço varchar(150) not null,
+	cidade varchar(50) not null,
+	codigo_postal varchar(40) not null,
+	fk_utilizador_id int not null,
+	fk_pais_id int not null,
+	foreign key(fk_utilizador_id) references utilizador (user_id),
+	foreign key(fk_pais_id) references pais ( pais_id),
+	primary key(morada_id)
+);
+
+create table fundo(
+
+	fundo_id serial not null unique,
+	total_ganho numeric(10,2) not null default 0,
+	total_por_receber numeric(10,2) not null default 0,
+	withdrawable numeric(10,2) not null default 0,
+	fk_explicador_id int not null,
+	foreign key(fk_explicador_id) references explicador (explicador_id),
+	primary key(fundo_id)
+
+);
+
+ create table disciplina(
+ 
+	 disciplina_id serial not null unique,
+	 nome varchar(60) not null,
+	 primary key(disciplina_id)
+ 
+ );
+ 
+ create table anuncio(
+ 
+ 	anuncio_id serial not null unique,
+	preco int not null,
+	descricao_aula varchar(800) not null,
+	descricao_explicador varchar(800) not null,
+	titulo varchar(150) not null,
+	fk_explicador_id int not null,
+	fk_disciplina_id int not null,
+	fk_rank_id int not null,
+	foreign key(fk_explicador_id) references explicador(explicador_id),
+	foreign key(fk_disciplina_id) references disciplina(disciplina_id),
+	foreign key(fk_rank_id) references rank(rank_id),
+	primary key(anuncio_id) 
+ 
+);
+
+create table aluno(
+
+	aluno_id serial not null unique,
+	fk_utilizador_id int not null,
+	foreign key (fk_utilizador_id) references utilizador(user_id),
+	primary key(aluno_id)
+);
+
+create table comentario(
+
+	comentario_id serial not null unique,
+	comentario varchar(180) not null,
+	fk_aluno_id int not null,
+	foreign key (fk_aluno_id) references aluno (aluno_id),
+	primary key(comentario_id)
+);
+
+create table comentario_anuncio(
+
+	comentario_anuncio_id serial not null unique,
+	fk_comentario_id int not null,
+	fk_anuncio_id int not null,
+	foreign key(fk_comentario_id) references comentario(comentario_id),
+	foreign key(fk_anuncio_id) references anuncio(anuncio_id),
+	primary key(comentario_anuncio_id)
+
+);
+
+select * from comentario_anuncio
+
+create table metodo_de_pagamento(
+
+	metodo_de_pagamento_id serial not null unique,
+	modalidade varchar(80) not null,
+	email varchar(80) not null,
+	telefone varchar(20) not null,
+	primary key(metodo_de_pagamento_id)
+);
+
+create table utilizador_metodo(
+
+	utilizador_metodo_id serial not null unique,
+	fk_metodo_id int not null,
+	fk_utilizador_id int not null,
+	foreign key (fk_metodo_id) references metodo_de_pagamento(metodo_de_pagamento_id),
+	foreign key (fk_utilizador_id) references utilizador ( user_id),
+	primary key(utilizador_metodo_id)
+
+);
+
+create table pedido(
+
+	pedido_id serial not null unique,
+	data date not null,
+	status bit default null,
+	hora time not null,
+	fk_modalidade_id int not null,
+	fk_aluno_id int not null,
+	fk_anuncio_id int not null,
+	foreign key(fk_modalidade_id) references modalidade(modalidade_id),
+	foreign key(fk_aluno_id) references aluno(aluno_id),
+	foreign key(fk_anuncio_id) references anuncio(anuncio_id),
+	primary key(pedido_id)
+);
+
+create table modalidade(
+
+	modalidade_id serial not null unique,
+	primary key(modalidade_id)
+);
+
+alter table modalidade add column modalidade varchar(60) not null;
+
+create table estado_do_pedido(
+
+	estado_do_pedido_id serial not null unique,
+	estado varchar(60) not null,
+	primary key(estado_do_pedido_id)
+);
+
+create table pedido_estado(
+
+	pedido_estado_id serial not null unique,
+	fk_estado_id int not null,
+	fk_pedido_id int not null,
+	foreign key(fk_estado_id) references estado_do_pedido (estado_do_pedido_id),
+	foreign key(fk_pedido_id) references pedido(pedido_id),
+	primary key(pedido_estado_id)
+);
+
+create table explicacao(
+
+	explicacao_id serial not null unique,
+	titulo varchar(100) not null,
+	fk_pedido_id int not null,
+	foreign key (fk_pedido_id) references pedido(pedido_id),
+	primary key(explicacao_id)
+
+);
+
+create table check_exp(
+
+	check_id serial not null unique,
+	cehck varchar(60) not null,
+	primary key(check_id)
+);
+
+create table check_exp_explicacao(
+
+	check_explicacao_id serial not null unique,
+	fk_check_exp_id int not null,
+	fk_explicacao_id int not null,
+	foreign key(fk_check_exp_id) references check_exp (check_id),
+	foreign key(fk_explicacao_id) references explicacao(explicacao_id),
+	primary key(check_explicacao_id)
+
+);
+
+create table pagamento(
+
+	pagamento_id serial not null unique,
+	valor numeric(10,2) not null,
+	taxa numeric (10,2) not null,
+	data date not null,
+	fk_explicador_id int not null,
+	fk_explicacao_id int not null,
+	foreign key(fk_explicador_id) references explicador(explicador_id),
+	foreign key(fk_explicacao_id) references explicacao(explicacao_id),
+	primary key(pagamento_id)
+
+);
+
+create table materia(
+
+	materia_id serial not null unique,
+	nome varchar(80) not null,
+	primary key(materia_id)
+);
+
+create table topico(
+
+	topico_id serial not null unique,
+	topico varchar(100) not null,
+	fk_materia_id int not null,
+	foreign key (fk_materia_id) references materia(materia_id),
+	primary key(topico_id)
+);
+
+create table disciplina_topico(
+ 
+ 	disciplina_topico_id serial not null,
+	nome varchar(80) not null,
+	fk_disciplina_id int not null,
+	fk_topico_id int not null,
+	foreign key(fk_disciplina_id) references disciplina(disciplina_id),
+	foreign key(fk_topico_id) references topico(topico_id),
+ 	primary key(disciplina_topico_id)
+);
+
+select * from disciplina_topico
+
+INSERT INTO pais (pais)VALUES 
+('Afghanistan')
+,('Aland Islands')
+,('Albania')
+,('Algeria')
+,('American Samoa')
+,('Andorra')
+,('Angola')
+,('Anguilla')
+,('Antarctica')
+,('Antigua and Barbuda')
+,('Argentina')
+,('Armenia')
+,('Aruba')
+,('Australia')
+,('Austria')
+,('Azerbaijan')
+,('Bahamas')
+,('Bahrain')
+,('Bangladesh')
+,('Barbados')
+,('Belarus')
+,('Belgium')
+,('Belize')
+,('Benin')
+,('Bermuda')
+,('Bhutan')
+,('Bolivia')
+,('Bonaire, Sint Eustatius and Saba')
+,('Bosnia and Herzegovina')
+,('Botswana')
+,('Bouvet Island')
+,('Brazil')
+,('British Indian Ocean Territory')
+,('Brunei')
+,('Bulgaria')
+,('Burkina Faso')
+,('Burundi')
+,('Cambodia')
+,('Cameroon')
+,('Canada')
+,('Cape Verde')
+,('Cayman Islands')
+,('Central African Republic')
+,('Chad')
+,('Chile')
+,('China')
+,('Christmas Island')
+,('Cocos (Keeling) Islands')
+,('Colombia')
+,('Comoros')
+,('Congo')
+,('Cook Islands')
+,('Costa Rica')
+,('Ivory Coast')
+,('Croatia')
+,('Cuba')
+,('Curacao')
+,('Cyprus')
+,('Czech Republic')
+,('Democratic Republic of the Congo')
+,('Denmark')
+,('Djibouti')
+,('Dominica')
+,('Dominican Republic')
+,('Ecuador')
+,('Egypt')
+,('El Salvador')
+,('Equatorial Guinea')
+,('Eritrea')
+,('Estonia')
+,('Ethiopia')
+,('Falkland Islands (Malvinas)')
+,('Faroe Islands')
+,('Fiji')
+,('Finland')
+,('France')
+,('French Guiana')
+,('French Polynesia')
+,('French Southern Territories')
+,('Gabon')
+,('Gambia')
+,('Georgia')
+,('Germany')
+,('Ghana')
+,('Gibraltar')
+,('Greece')
+,('Greenland')
+,('Grenada')
+,('Guadaloupe')
+,('Guam')
+,('Guatemala')
+,('Guernsey')
+,('Guinea')
+,('Guinea-Bissau')
+,('Guyana')
+,('Haiti')
+,('Heard Island and McDonald Islands')
+,('Honduras')
+,('Hong Kong')
+,('Hungary')
+,('Iceland')
+,('India')
+,('Indonesia')
+,('Iran')
+,('Iraq')
+,('Ireland')
+,('Isle of Man')
+,('Israel')
+,('Italy')
+,('Jamaica')
+,('Japan')
+,('Jersey')
+,('Jordan')
+,('Kazakhstan')
+,('Kenya')
+,('Kiribati')
+,('Kosovo')
+,('Kuwait')
+,('Kyrgyzstan')
+,('Laos')
+,('Latvia')
+,('Lebanon')
+,('Lesotho')
+,('Liberia')
+,('Libya')
+,('Liechtenstein')
+,('Lithuania')
+,('Luxembourg')
+,('Macao')
+,('Macedonia')
+,('Madagascar')
+,('Malawi')
+,('Malaysia')
+,('Maldives')
+,('Mali')
+,('Malta')
+,('Marshall Islands')
+,('Martinique')
+,('Mauritania')
+,('Mauritius')
+,('Mayotte')
+,('Mexico')
+,('Micronesia')
+,('Moldava')
+,('Monaco')
+,('Mongolia')
+,('Montenegro')
+,('Montserrat')
+,('Morocco')
+,('Mozambique')
+,('Myanmar (Burma)')
+,('Namibia')
+,('Nauru')
+,('Nepal')
+,('Netherlands')
+,('New Caledonia')
+,('New Zealand')
+,('Nicaragua')
+,('Niger')
+,('Nigeria')
+,('Niue')
+,('Norfolk Island')
+,('North Korea')
+,('Northern Mariana Islands')
+,('Norway')
+,('Oman')
+,('Pakistan')
+,('Palau')
+,('Palestine')
+,('Panama')
+,('Papua New Guinea')
+,('Paraguay')
+,('Peru')
+,('Phillipines')
+,('Pitcairn')
+,('Poland')
+,('Portugal')
+,('Puerto Rico')
+,('Qatar')
+,('Reunion')
+,('Romania')
+,('Russia')
+,('Rwanda')
+,('Saint Barthelemy')
+,('Saint Helena')
+,('Saint Kitts and Nevis')
+,('Saint Lucia')
+,('Saint Martin')
+,('Saint Pierre and Miquelon')
+,('Saint Vincent and the Grenadines')
+,('Samoa')
+,('San Marino')
+,('Sao Tome and Principe')
+,('Saudi Arabia')
+,('Senegal')
+,('Serbia')
+,('Seychelles')
+,('Sierra Leone')
+,('Singapore')
+,('Sint Maarten')
+,('Slovakia')
+,('Slovenia')
+,('Solomon Islands')
+,('Somalia')
+,('South Africa')
+,('South Georgia and the South Sandwich Islands')
+,('South Korea')
+,('South Sudan')
+,('Spain')
+,('Sri Lanka')
+,('Sudan')
+,('Suriname')
+,('Svalbard and Jan Mayen')
+,('Swaziland')
+,('Sweden')
+,('Switzerland')
+,('Syria')
+,('Taiwan')
+,('Tajikistan')
+,('Tanzania')
+,('Thailand')
+,('Timor-Leste (East Timor)')
+,('Togo')
+,('Tokelau')
+,('Tonga')
+,('Trinidad and Tobago')
+,('Tunisia')
+,('Turkey')
+,('Turkmenistan')
+,('Turks and Caicos Islands')
+,('Tuvalu')
+,('Uganda')
+,('Ukraine')
+,('United Arab Emirates')
+,('United Kingdom')
+,('United States')
+,('United States Minor Outlying Islands')
+,('Uruguay')
+,('Uzbekistan')
+,('Vanuatu')
+,('Vatican City')
+,('Venezuela')
+,('Vietnam')
+,('Virgin Islands, British')
+,('Virgin Islands, US')
+,('Wallis and Futuna')
+,('Western Sahara')
+,('Yemen')
+,('Zambia')
+,('Zimbabwe');
+
+
+insert into disciplina (nome) values 
+('Lingua Portuguesa')
+,('Analise Matematica I')
+,('Analise Matematica II')
+,('Algebra Linear')
+,('Algoritmos e estruturas de dados')
+,('Programação Orientada a objetos')
+,('Estruturação do pensamento Logico')
+,('Matematica Discreta')
+,('Estatistica')
+,('Fisica')
+,('Quimica')
+,('Filosofia')
+,('Programação')
+,('Inteligencia Artificial')
+,('Economia')
+,('Principio do direito publico')
+,('Principios do direito Privado')
+,('Direito Constitucional')
+,('Redes e telecomunicações')
+,('Base de Dados')
+,('Sistemas Digitais')
+,('Interfaces Design')
+,('Sistemas de informação Geograficos')
+,('Metodologias de design')
+,('Desenho Tecnico')
+,('Adobe & Photoshop')
+,('Microsft Office')
+,('Inglês')
+,('Alemão')
+,('Françês')
+,('Biologia')
+,('Geologia')
+,('Programção Android')
+,('Programação Swift IOS')
+,('Desenho Tecnico')
+,('Marketing Digital')
+,('Psicologia')
+,('Estudo do meio')
+,('Bioquimica')
+,('Engenharia de software')
+,('Matematica - Ensino Basico')

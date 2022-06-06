@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+:root{
+
+    --main-color1: #ff7f50;
+    --main-color2: #1d2231;
+    --main-colo3: #8390a2;
+}
+
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar{
+
+    width: 345px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--main-color1);
+    z-index: 100%;
+    transition: width 300ms;
+}
+
+.Main-content{
+
+    margin-left: 345px;
+    transition: margin-left 300ms;
+}
+
+.sidebar-brand span{
+
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+.sidebar-menu li{
+
+    width: 100%;
+    margin-bottom: 1.7rem;
+    padding-left: 1rem;
+}
+
+.sidebar-menu a{
+
+    padding-left: 1rem;
+    display: block;
+    color: #fff;
+    font-size: 1.1rem;
+
+}
+
+.sidebar-menu a.active{
+
+    background: #fff;
+    padding-top: 1rem ;
+    padding-bottom: 1rem;
+    color: var(--main-color);
+    border-radius: 30px 0px 0px 30px;
+
+}
+
+.sidebar-menu a span :first-child{
+
+    font-size: 1.5rem;
+    padding-right: 1rem;
+
+}
+
+#nav-toggle:checked + .sidebar{
+
+    width: 70px;
+}
+
+#nav-toggle:checked + .sidebar .sidebar-brand,
+#nav-toggle:checked + .sidebar li{
+
+    padding-left: 1rem;
+    text-align: center;
+}
+
+#nav-toggle:checked + .sidebar li a{
+
+    padding-left: 0rem;
+}
+
+#nav-toggle:checked + .sidebar .sidebar-brand h2 span:last-child,
+#nav-toggle:checked + .sidebar li a span:last-child{
+
+   display: none;
+}
+
+#nav-toggle:checked ~ .Main-content{
+
+    margin-left: 70px;
+}
+
+#nav-toggle:checked ~ .Main-content header{
+
+    width: calc(100% - 70px);
+    left: 70px;
+}
+
+
+
+.sidebar-menu {
+
+    margin-top: 1rem;
+
+}
+
+.sidebar-brand{
+
+    height: 90px;
+    padding: 1rem 0rem 1rem 2rem;
+    color: #fff;
+}
+
+header{
+    
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    left: 345px;
+    width: calc(100% - 345px);
+    top: 0;
+    z-index: 100;
+    transition: left 300ms;
+    
+}
+
+#nav-toggle{
+
+    display: none;
+}
+
+header h2{
+
+    color: #222;
+}
+
+header label span{
+
+    font-size: 1.7rem;
+    padding-right: 1rem;
+
+
+}
+
+.search-wrapper{
+
+
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.search-wrapper input{
+
+    height: 100%;
+    padding: .5rem;
+    border: none;
+    outline: none;
+}
+
+.search-wrapper span{
+    display: inline-block;
+    padding:  0rem 1rem;
+    font-size: 1.5rem
+}
+
+
+.user-wrapper{
+
+    display: flex;
+    align-items: center;
+}
+
+.user-wrapper img{
+
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.user-wrapper small{
+
+    display: inline-block;
+    color: var(--main-color1);
+    margin-top: -10px;
+    font-size: 15px;
+}
+
+main{
+
+    margin-top: 89px;
+    background: #f1f5f9;
+    min-height: calc(210vh - 90px);
+
+}
+
+.div-right{
+
+    background-color: white;
+    width: 330px;
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.315);
+    margin-top: 20px;
+    margin-left: 20px;
+    position: absolute;
+}
+
+.informacoes-gerais{
+
+    padding-top: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.div-right-sub{
+
+    width: 330px;
+    height: 410px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.315);
+    border-radius: 20px;
+    margin-top: 640px;
+    margin-left: 20px;
+    position: absolute;
+}
+
+.formulario{
+
+    padding-top: 30px;
+    padding-left: 15px;
+    
+}
+
+.formulario input{
+
+    width: 300px;
+    height: 50px;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: rgba(255, 127, 80, 0.615);
+    margin-bottom: 25px;
+}
+
+.validate-button-2{
+
+    width: 150px;
+    height: 40px;
+    display: block;
+    margin: auto;
+    margin-left: 72px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: coral;
+    box-shadow: rgba(0, 0, 0, 0.315);
+    color: whitesmoke;
+}
+
+.div-right-sub h5{
+
+    text-align: center;
+    padding-top: 30px;
+    font-size: 20px;
+
+}
+
+.div-right-sub input{
+
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.div-right-sub button{
+
+    margin-left: 90px;
+}
+
+.photo-circle{
+
+    width: 190px;
+    height: 160px;
+    background-color: whitesmoke;
+    border-radius: 70px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#diploma{
+
+    position: absolute;
+    margin-top: 14px;
+    margin-left: 39px;
+
+}
+
+.div-meio{
+
+    position: absolute;
+    width: 330px;
+    height: 380px;
+    background-color: white;
+    margin-left: 365px;
+    margin-top: 20px;
+    border-radius: 20px;
+
+}
+
+.div-meio h5{
+
+    text-align: center;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.315);
+    padding-top: 30px;
+}
+
+.div-meio #mapAddress{
+
+    position: absolute;
+    width: 330px;
+    height: 300px;
+    margin-top: 26px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.map-change-search{
+
+    margin-top: 10px;
+    height: 40px;
+    width: 270px;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: rgba(255, 127, 80, 0.615);
+}
+
+.div-esquerda{
+
+    position: absolute;
+    width: 350px;
+    height: 490px;
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 710px;
+    border-radius: 20px;
+}
+
+.Img-avatar{
+
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 13px;
+    border-radius: 20px;
+}
+
+.input-form{
+
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, - 50%);
+    position: absolute;
+    padding-top: 110px;
+    margin-left: -150px;
+    
+}
+
+.upload-box{
+
+    font-size: 10px;
+    background: whitesmoke;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.315);
+    width: 310px;
+    outline: none;
+    position: absolute;
+}
+
+::-webkit-file-upload-button{
+
+    color: whitesmoke;
+    background: coral;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    
+}
+
+.input-form-2{
+
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, - 50%);
+    position: absolute;
+    padding-top: 70px;
+    margin-left: -155px;
+    
+}
+
+.upload-box-2{
+
+    font-size: 10px;
+    background: whitesmoke;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.315);
+    width: 310px;
+    outline: none;
+    position: absolute;
+}
+
+.validate-button-3{
+
+    width: 150px;
+    height: 40px;
+    margin-top: 429px;
+    margin-left: 100px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: coral;
+    box-shadow: rgba(0, 0, 0, 0.315);
+    color: whitesmoke;
+    position: absolute;
+}
+
+.validate-button{
+
+    width: 150px;
+    height: 40px;
+    display: block;
+    margin: auto;
+    margin-left: 72px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: coral;
+    box-shadow: rgba(0, 0, 0, 0.315);
+    color: whitesmoke;
+    position: absolute;
+    margin-top: 74px;
+}
+
+.div-meio-sub{
+
+    position: absolute;
+    width: 330px;
+    height: 350px;
+    background-color: white;
+    border-radius: 20px; 
+    margin-left: 365px;
+    margin-top: 425px;
+}
+
+.div-meio-sub h5{
+
+    font-size: 17px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.formulario-change-password input{
+
+    width: 300px;
+    height: 50px;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: rgba(255, 127, 80, 0.615);
+    margin-bottom: 25px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.formulario-change-password button{
+
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: coral;
+    box-shadow: rgba(0, 0, 0, 0.315);
+    color: whitesmoke;
+}
+
+.div-esquerda-sub{
+
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    background: white;
+    margin-top: 530px;
+    margin-left: 710px;
+    border-radius: 20px;
+}
+
+.div-esquerda-sub h5{
+
+    font-size: 17px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.div-esquerda-sub p{
+
+    font-size: 14px;
+    text-align: center;
+    padding-top: 45px;
+}
+
+.check-delete-radio-form{
+
+    position: absolute;
+    margin-left: 65px;
+    margin-top: 30px;
+    background: whitesmoke;
+    width: 230px;
+    height: 50px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.315);
+}
+
+.check-delete-radio-form input{
+
+  position: absolute;
+  margin-left: 45px;
+  margin-top: 20px;
+   
+}
+
+.check-delete-radio-form label{
+
+    position: absolute;
+    margin-left: 65px;
+    margin-top: 15px;
+}
+
+.validate-button-5{
+
+    width: 150px;
+    height: 40px;
+    margin-left: 72px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: coral;
+    box-shadow: rgba(0, 0, 0, 0.315);
+    color: whitesmoke;
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 100px;
+}
+
+.div-meio-sub-2{
+
+    position: absolute;
+    width: 530px;
+    height: 530px;
+    background-color: white;
+    margin-left: 365px;
+    margin-top: 850px;
+    border-radius: 20px;
+}
+
+.div-meio-sub-2 h5{ 
+
+    font-size: 20px;
+    padding-top: 20px;
+    position: absolute;
+    margin-left: 140px;
+}
+
+#input-title-anounce{
+
+
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 110px;
+    width: 300px;
+    height: 50px;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: rgba(255, 127, 80, 0.615);
+
+}
+
+.text-area-anounce1{
+
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 30px;
+    resize: none;
+    border-radius: 6px;
+    border-color: rgba(255, 127, 80, 0.615);
+
+}
+
+.text-area-anounce2{
+
+    position: absolute;
+    margin-top: 280px;
+    margin-left: 30px;
+    resize: none;
+    border-radius: 6px;
+    border-color: rgba(255, 127, 80, 0.615);
+
+}
+
+.validate-button-6{
+
+    width: 150px;
+    height: 40px;
+    margin-left: 190px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: coral;
+    box-shadow: rgba(0, 0, 0, 0.315);
+    color: whitesmoke;
+    position: absolute;
+    margin-top: 475px;
+}
+
+#discplina-choose{
+
+    position: absolute;
+    margin-top: 410px;
+    margin-left: 30px;
+}
+
+#Disciplinas-select{
+
+    width: 150px;
+    border-radius: 6px;
+    height: 20px;
+    border-style: solid;
+    border-color: coral;
+
+}
+
+#input-price{
+
+    width: 150px;
+    border-radius: 6px;
+    height: 20px;
+    border-style: solid;
+    border-color: coral;
+}
+
+
+

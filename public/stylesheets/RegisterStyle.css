@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+
+
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body{
+
+    background: coral;
+
+}
+
+.text-fields1{
+
+    width: 180px;
+    height: 40px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    
+}
+
+#nome_input_registro{
+
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 470px;
+    background: whitesmoke;
+
+}
+
+#apelido_input_registro{
+
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 660px;
+    
+}
+
+#email_input_registro{
+
+    width: 371px;
+    height: 40px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 470px;
+}
+
+#telefone_input_registro{
+
+    width: 371px;
+    height: 40px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 220px;
+    position: absolute;
+    margin-left: 470px;
+}
+
+.genero_input{
+
+    position: absolute;
+    margin-top: 277px;
+    margin-left: 610px;
+    width: 234px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    height: 40px;
+}
+
+#date_input_registro{
+
+    position: absolute;
+    margin-top: 277px;
+    margin-left: 470px;
+    width: 130px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    height: 40px;
+    
+}
+
+#senha_input_registro{
+
+    position: absolute;
+    margin-top: 339px;
+    margin-left: 470px;
+    width: 371px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    height: 40px;
+}
+
+.Ratios{
+
+    position: absolute;
+    margin-top: 570px;
+    margin-left: 540px;
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.imgLogo{
+
+    position: absolute;
+    width: 130px;
+    margin-left: 490px;
+    margin-top: -20px;
+}
+
+.LogoLetter{
+
+    position: absolute;
+    color: whitesmoke;
+    font-size: 30px;
+    margin-left: 620px;
+    margin-top: 29px;
+}
+
+.registroContentor{
+
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.Registrar-button{
+
+    position: absolute;
+    width: 230px;
+    height: 68px;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background: white;
+    color: coral;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 610px;
+    margin-left: 525px;
+}
+
+.endereco-input{
+
+    position: absolute;
+    background: whitesmoke;
+    width: 371px;
+    height: 40px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 400px;
+    margin-left: 470px;
+}
+
+.Cidade-input{
+
+    position: absolute;
+    background: whitesmoke;
+    width: 371px;
+    height: 40px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 458px;
+    margin-left: 471px;
+}
+
+.zip-code-input{
+
+    position: absolute;
+    background: whitesmoke;
+    width: 261px;
+    height: 40px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 509px;
+    margin-left: 581px;
+}
+
+.pais-input{
+
+    position: absolute;
+    background: whitesmoke;
+    width: 100px;
+    height: 40px;
+    border-radius: 7px;
+    border-style: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 510px;
+    margin-left: 470px;
+}

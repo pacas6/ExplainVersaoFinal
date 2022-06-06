@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExplainMe! - Registre-se</title>
+    <link rel="stylesheet" href="stylesheets/RegisterStyle.css">
+
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+      type="text/javascript"
+    ></script>
+
+    <script src="javascripts/register.js"></script>
+    <script src="javascripts/posRegister.js"></script>
+    
+
+</head>
+<body>
+
+    <div class="registroContentor">
+
+        <img src="images/ImagensGeralProject/iconSemFundo.png" alt="" class="imgLogo">
+        <label for="ExplainMe" class="LogoLetter">ExplainMe!</label>
+
+        <input type="text" class="text-fields1" placeholder="Nome" id="nome_input_registro">
+        <input type="text" class="text-fields1" placeholder="Apelido" id="apelido_input_registro">
+        
+        <select name="Genero" id="genero_input_registro" title="gen" class="genero_input">
+            <option value="Genero">Genero</option>
+            <option value="M"> Masculino</option>
+            <option value="F">Femenino</option>
+        </select>
+
+        <input type="date" class="date-input" id="date_input_registro" title="data">
+        <input type="text" class="text-fields" placeholder="Email" id="email_input_registro">
+        <input type="text" class="text-fields" placeholder="telefone" id="telefone_input_registro">
+        <input type="text" class="text-fields" placeholder="Senha" id="senha_input_registro">
+
+        <input type="text" class="endereco-input" placeholder="Morada" id="endereço_input_registro">
+        <input type="text" class="Cidade-input" placeholder="Cidade" id="cidade_input_registro">
+        <input type="text" class="zip-code-input" placeholder="Codigo-postal" id="codigo_postal_input_registro">
+        <select name="Pais" id="pais_input_registro" class="pais-input" title="pais-select">
+
+            <option value="Pais">Pais</option>
+        </select>
+
+        <div class="Ratios">
+
+            <!---
+            
+            Professor <input type="radio" class="professor-ratio" name="Professor-aluno" id="type_input_registro" placeholder="professor" checked>
+           Aluno <input type="radio" class="aluno-ratio" name="Professor-aluno" id="type_input_registro_2" placeholder="aluno"> 
+        
+            -->
+
+            <input type="radio" class="professor-ratio" name="professor_ratio" id="professor_input_registro" value="1" title="ratio1" checked="checked">
+            <label for="Professor"> Professor</label> 
+            <input type="radio" name="professor_ratio" id="aluno_input_registro" value="2" title="ratio2">
+            <label for="aluno">Aluno</label>
+            
+        </div>
+
+        
+        <input type="button" value="Registrar" class="Registrar-button" onclick="newUser()">
+    </div>
+
+    
+</body>
+</html>
