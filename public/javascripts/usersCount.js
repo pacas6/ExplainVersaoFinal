@@ -3,6 +3,7 @@ window.onload = async function (){
     showUsersCount();
     refreshDataPage();
     getDataFromRegister();
+    getUserMorada();
 }
 
 async function showUsersCount(){
@@ -21,6 +22,7 @@ async function showUsersCount(){
         document.getElementById('CardValue').innerHTML = html;
         document.getElementById('CardValue2').innerHTML = html;
 
+        
     } catch (error) {
         console.log(error);
     }
@@ -39,8 +41,6 @@ async function refreshDataPage(){
         dataType: 'json',
       });
 
-      
-  
       let html = `<h4>${userLoaded.nome} ${userLoaded.apelido}</h4>`; 
   
       document.getElementById('Name-Profile-show').innerHTML = html;
@@ -111,6 +111,27 @@ async function refreshDataPage(){
     }
 };
 
+async function getUserMorada(){
+
+  try {
+    
+
+    let uid = sessionStorage.getItem('user_id');
+
+    let moradaUser = await $.ajax({
+      url: `/api/users/moradaUser/${uid}`,
+      method: 'GET',
+      datatype: 'json',
+    });
+
+    console.log(moradaUser);
+
+    sessionStorage.setItem('morada_id', moradaUser.morada_id)
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 async function getDataFromRegister(){
 
   try {
@@ -131,9 +152,28 @@ async function getDataFromRegister(){
 
         if(status == 'OK') {
 
-          console.log(JSON.stringify(results[0].geometry.location));
+          let co = JSON.stringify(results[0].geometry.location)
+          console.log(co);
 
-          
+          let co2 = JSON.parse(co);
+
+          console.log(co2.lat);
+
+          coordenadas = {
+
+            lat: co2.lat,
+            lng: co2.lng,
+            fk_morada_id: sessionStorage.getItem('morada_id')
+          }
+
+          let PoostCoord = $.ajax({
+
+            url: '/api/geo/postGeoCoord',
+            method: 'POST',
+            data: JSON.stringify(coordenadas),
+            dataType: 'json',
+            contentType: 'application/json',
+          });
 
         } else {
 
