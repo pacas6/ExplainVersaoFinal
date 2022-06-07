@@ -2,6 +2,7 @@ window.onload = async function (){
 
     showUsersCount();
     refreshDataPage();
+    getDataFromRegister();
 }
 
 async function showUsersCount(){
@@ -21,7 +22,7 @@ async function showUsersCount(){
         document.getElementById('CardValue2').innerHTML = html;
 
     } catch (error) {
-        
+        console.log(error);
     }
 }
 
@@ -110,5 +111,40 @@ async function refreshDataPage(){
     }
 };
 
+async function getDataFromRegister(){
+
+  try {
+    
+
+    console.log(sessionStorage.getItem('zip-code'));
+    console.log(sessionStorage.getItem('address'));
+    console.log(sessionStorage.getItem('user_id'));
+
+
+    var address = `${sessionStorage.getItem('address')} ${sessionStorage.getItem('zip-code')}`;
+
+    console.log(address);
+
+    var geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode({'address': address}, function(results, status){
+
+        if(status == 'OK') {
+
+          console.log(JSON.stringify(results[0].geometry.location));
+
+          
+
+        } else {
+
+          console.log('Geocode was not successful for the following reason: ' + status);
+        }
+
+    });
+
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 

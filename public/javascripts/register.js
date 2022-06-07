@@ -32,11 +32,11 @@ async function newUser(){
         window.alert('Registration succesfull');
         sessionStorage.setItem('user_id',result.rows[0].fk_utilizador_id);
         sessionStorage.setItem('type', user.type);
+        sessionStorage.setItem('zip-code', user.codigo_postal);
         sessionStorage.setItem('address', user.endereço);
         sessionStorage.setItem('apelido', user.apelido);
 
         window.location = 'DashBoard.html';
-
 
 
     } catch (error) {
