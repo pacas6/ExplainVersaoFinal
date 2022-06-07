@@ -8,16 +8,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-
-div.mainInfo{
-
-    position: absolute;
-    background-color: coral;
-    width: 100%;
-    height: 100%;
-    
-}
-
 .HomeImage{
 
     width: 110px;
@@ -35,6 +25,7 @@ header{
     border-style: none none inset none;
     height: 127px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: coral;
 }
 
 .contentor{
@@ -89,6 +80,7 @@ header{
     border-style: none;
     font-size: 1.2rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 3.5rem;
 
 }
 
@@ -175,8 +167,9 @@ header{
 
 .InformationIntroDiv{
 
-    margin-top: 50px;
-    margin-left: 50px;
+   width: 100%;
+   height: 790px;
+   background: coral;
 }
 
 .InformationIntroDiv h1{
@@ -204,7 +197,9 @@ header{
 .IntroImage{
 
     width: 910px;
-    margin-left: 530px;
+    margin-left: 570px;
+    position: absolute;
+    margin-top: -730px;
 }
 
 .BackGroundCard{
