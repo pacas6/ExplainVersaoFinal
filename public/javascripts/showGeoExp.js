@@ -333,6 +333,7 @@ async function showGeoExp(){
                         lat: position.coords.latitude,
                         lng: position.coords.longitude,
                     };
+                    sessionStorage.setItem('postion', pos);
 
                     const marker = new google.maps.Marker({
 
@@ -409,8 +410,35 @@ async function showGeoExp(){
 
         console.log(coordenadas);
 
+        const directionsService = new google.maps.DirectionsService();
+        const directionsRenderer = new google.maps.DirectionsRenderer({
+
+            draggable: true
+
+        });
+
+        directionsRenderer.setMap(map);
+
+        directionsService.route({
+
+            origin: sessionStorage.getItem('position'),
+            destination: 'Porto, Portugal',
+            travelMode: google.maps.TravelMode.DRIVING
+
+        }).then(response =>{
+
+            console.log({response});
+            directionsRenderer.setDirections(response);
+
+        }).catch(err =>{
+
+            console.log({err});
+        });
+
     } catch (error) {
         console.log(error)
     }
 }
+
+
 
