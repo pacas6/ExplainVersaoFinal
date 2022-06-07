@@ -22,7 +22,7 @@ async function explicadoresGet(){
         let html = ``
         for(let list of expLoaded){
 
-            html+=`<a href="">
+            html+=`<a href="HomePerfil.html" id="${list.fk_utilizador_id}">
             <div class="perfil-div" id="peril-div">
 
                 <ul class="perfil-elements">
@@ -54,17 +54,16 @@ async function explicadoresGet(){
                     </button>
                 </ul>
 
-                <param name="${list.nome}" value="${list.fk_utilizador_id}">
+                
                 
             </div>
         </a>`
         }
 
+        console.log(html);
         document.getElementById('list-perfil').innerHTML = html;
 
-        console.log (html);
-
-
+        
 
 
     } catch (error) {
