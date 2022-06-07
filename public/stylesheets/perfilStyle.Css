@@ -277,27 +277,28 @@ header{
 
 #reviews{
 
-    width: 600px;
-    height: 100px;
-    margin-left: 3.5rem;
+
+    width: 800px;
     margin-top: 5%;
-    border-color: coral;
-    border-radius: 6px;
+    margin-left: 3.5rem;
 }
 
 #reviews strong{
 
     font-size: 30px;
     color: coral;
-
 }
-
-
 
 #review-bar{
 
-
-    width: 900px;
-    height: 40px;
+    width: 600px;
+    border-style: solid;
+    border-radius: 7px;
+    border-color: coral;
     
+}
+
+#review-bar p{
+
+    margin-top: 17px;
 }

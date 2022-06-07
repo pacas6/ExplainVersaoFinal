@@ -53,12 +53,19 @@ async function explicadoresGet(){
                         Ver Perfil
                     </button>
                 </ul>
+
+                <param name="${list.nome}" value="${list.fk_utilizador_id}">
                 
             </div>
         </a>`
         }
 
-    document.getElementById('list-perfil').innerHTML = html;
+        document.getElementById('list-perfil').innerHTML = html;
+
+        console.log (html);
+
+
+
 
     } catch (error) {
         console.log(error)
