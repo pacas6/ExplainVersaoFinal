@@ -333,7 +333,6 @@ async function showGeoExp(){
                         lat: position.coords.latitude,
                         lng: position.coords.longitude,
                     };
-                    sessionStorage.setItem('postion', pos);
 
                     const marker = new google.maps.Marker({
 
@@ -398,13 +397,17 @@ async function showGeoExp(){
                 position: marker.getPosition,
                 content: `<h3>${list.endereço}</h4><p>${list.nome} ${list.apelido}</p>`,
             });
-
-            infoWindow.open(map, marker);
+            
+            marker.addListener("click", () => {
+            
+                infoWindow.open(map,marker);
+            });
 
             //infoWindow.setPosition(marker.getPosition);
             //infoWindow.setContent(`<h3>${list.endereço}</h4><p>${list.nome} ${list.apelido}</p>`);
             //infoWindow.open(map, marker);
         }
+
 
         sessionStorage.setItem('coords', coordenadas.geo_coords);
 
@@ -417,12 +420,15 @@ async function showGeoExp(){
 
         });
 
+        console.log(JSON.stringify(sessionStorage.getItem('postion')));
+
+
         directionsRenderer.setMap(map);
 
         directionsService.route({
 
-            origin: sessionStorage.getItem('position'),
-            destination: 'Porto, Portugal',
+            origin: ' praceta carolina beatriz angelo',
+            destination: 'Av dom dinis 59',
             travelMode: google.maps.TravelMode.DRIVING
 
         }).then(response =>{
