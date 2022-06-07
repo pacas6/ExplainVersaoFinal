@@ -306,3 +306,133 @@ header{
     margin-left: 489px;
     margin-top: 13px;
 }
+
+#section-2{
+
+    width: 100%;
+    height: 1200px;
+    background: whitesmoke;
+    position: absolute;
+}
+
+#title-div{
+
+    font-size: 60px;
+    color: coral;
+    margin-left: 5.4rem;
+    margin-top: 30px;
+}
+
+#f-1{
+
+    
+    color: coral;
+    margin-left: 19%;
+    margin-top: 10%;
+}
+
+#f-1 strong{
+
+    font-size: 35px;
+    
+}
+
+#f-1 p{
+
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+#side-f1-image{
+
+    position: absolute;
+    width: 300px;
+    height: 240px;
+    background: coral;
+    margin-left: 51%;
+    margin-top: -15%;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+
+#search-bar{
+
+    width: 300px;
+    color: coral;
+    position: absolute;
+    
+}
+
+#f-2{
+
+    position: absolute;
+    margin-left: 54%;
+    margin-top: 10%;
+    width: 300px;
+    color: coral;
+}
+
+#f-2 strong{
+
+    font-size: 35px;
+    
+}
+
+#f-2 p{
+
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+#side-f2-image{
+
+    position: absolute;
+    width: 300px;
+    height: 240px;
+    background: coral;
+    margin-left: 20%;
+    margin-top: 8%;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+
+#calendar{
+
+    width: 240px;
+    margin-left: 30px;
+}
+
+#f-3{
+
+    position: absolute;
+    margin-left: 21%;
+    margin-top: 30%;
+    width: 300px;
+    color: coral;
+}
+
+#f-3 strong{
+
+    font-size: 35px;
+    
+}
+
+#f-3 p{
+
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+#side-f3-image{
+
+    position: absolute;
+    width: 300px;
+    height: 240px;
+    background: coral;
+    margin-left: 50%;
+    margin-top: 30%;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+
+
