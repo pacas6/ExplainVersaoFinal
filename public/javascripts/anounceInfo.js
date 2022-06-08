@@ -99,7 +99,7 @@ async function getUnities(){
 
     for( let list of disciplinas){
 
-      html+= `<option value="${list.disciplina_id}">${list.nome}</option>`
+      html+= `<option value="${list.disciplina_id}">${list.disciplina_nome}</option>`
     }
 
     console.log(html);
