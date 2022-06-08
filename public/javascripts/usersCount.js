@@ -28,6 +28,7 @@ async function showUsersCount(){
     }
 }
 
+
 async function refreshDataPage(){
 
     try {
@@ -70,6 +71,18 @@ async function refreshDataPage(){
         document.getElementById('box-4').innerText = 'Lucro';
         document.getElementById('box-4-image').innerHTML= '<span class="las la-hand-holding-usd"></span>'
         document.getElementById('estatuto-show').innerHTML='<h4> Professor </h4>'
+
+        let html = `<h3>Pedidos recentes</h3>`
+        document.getElementById('recent').innerHTML = html;
+
+        let html1 = ` <td>Aluno</td>
+                      <td>Data</td>
+                      <td>Status</td>`
+        
+        document.getElementById('table-row').innerHTML = html1;
+
+        
+
 
       } else if(userLoaded.type == 2){
 

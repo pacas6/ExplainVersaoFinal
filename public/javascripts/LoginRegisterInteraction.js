@@ -20,3 +20,5 @@ function hideCardAndBackGround(){
     document.getElementById('RegisterCard').style.visibility = 'hidden'
 
 }
+
+

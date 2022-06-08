@@ -35,7 +35,12 @@
     <div class="sidebar">
         <div class="sidebar-brand">
             <h2>
-                <span class="lab la-accusoft"></span> <span>Explain Me!</span></h2>
+
+                <a href="HomePage.html" title="he"><span class="lab la-accusoft"></span></a>
+                 <span>Explain Me!</span>
+                
+            </h2>
+                
         </div>
 
         <div class="sidebar-menu">
@@ -200,7 +205,7 @@
                 <div class="projects">
                     <div class="card">
                         <div class="card-header"> 
-                            <h3>Recent Registers</h3>
+                            <h3 id="recent">Recent Registers</h3>
 
                             <button> Se all <span class="las la-arrow-right">
                             </span></button>
@@ -208,11 +213,11 @@
 
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table width="100%">
+                                <table width="100%" id="info-table">
 
                                     <thead>
     
-                                        <tr>
+                                        <tr id="table-row">
                                             <td>Project title</td>
                                             <td>Departament</td>
                                             <td>Status</td>

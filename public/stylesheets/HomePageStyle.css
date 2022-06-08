@@ -197,7 +197,7 @@ header{
 .IntroImage{
 
     width: 910px;
-    margin-left: 570px;
+    margin-left: 530px;
     position: absolute;
     margin-top: -730px;
 }
@@ -435,4 +435,9 @@ header{
     opacity: 0.8;
 }
 
+#corner-image{
+
+    border-radius: 20px;
+    
+}
 

@@ -125,10 +125,17 @@ async function getRankStatus(){
 
     console.log(rankUser);
 
-    let html = `<small> ${rankUser.estatuto}</small>`
+
+    if(sessionStorage.getItem('type') == 1){
+
+      let html = `<small> ${rankUser.estatuto}</small>`
     document.getElementById('estatuto-show').innerHTML = html;
 
-    sessionStorage.setItem('rank_id',rankUser.fk_rank_id);
+    } else if(sessionStorage.getItem('type') == 2){
+
+      let html = `<small> Aluno </small>`
+    document.getElementById('estatuto-show').innerHTML = html;
+    }
 
   } catch (error) {
     console.log(error);
