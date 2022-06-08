@@ -41,6 +41,7 @@ async function refreshDataPage(){
         dataType: 'json',
       });
 
+
       let html = `<h4>${userLoaded.nome} ${userLoaded.apelido}</h4>`; 
   
       document.getElementById('Name-Profile-show').innerHTML = html;
@@ -68,7 +69,7 @@ async function refreshDataPage(){
         
         document.getElementById('box-4').innerText = 'Lucro';
         document.getElementById('box-4-image').innerHTML= '<span class="las la-hand-holding-usd"></span>'
-        
+        document.getElementById('estatuto-show').innerHTML='<h4> Professor </h4>'
 
       } else if(userLoaded.type == 2){
 
@@ -101,6 +102,7 @@ async function refreshDataPage(){
         
         document.getElementById('box-4').innerText = 'Lucro';
         document.getElementById('box-4-image').innerHTML= '<span class="las la-hand-holding-usd"></span>';
+        document.getElementById('estatuto-show').innerHTML='<h4> Aluno </h4>'
 
       }
 
@@ -127,6 +129,9 @@ async function getUserMorada(){
     console.log(moradaUser);
 
     sessionStorage.setItem('morada_id', moradaUser.morada_id)
+
+    
+    
   } catch (error) {
     console.log(error);
   }
@@ -182,9 +187,12 @@ async function getDataFromRegister(){
 
     });
 
+    
+
   } catch (error) {
     console.log(error);
   }
 }
+
 
 

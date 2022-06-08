@@ -198,8 +198,9 @@ header label span{
 .user-wrapper small{
 
     display: inline-block;
-    color: var(--main-color2);
+    color: var(--main-color1);
     margin-top: -10px;
+    font-size: 15px;
 }
 
 main{
