@@ -185,5 +185,32 @@ module.exports.getUserMorada = async function(uId){
     }
 };
 
+module.exports.getExp = async function(){
+
+    try {
+        
+        let sql = 'select utilizador.nome, utilizador.apelido, explicador.explicador_id from utilizador inner join explicador on utilizador.user_id = explicador.explicador_id';
+
+        //
+        let result = await pool.query(sql);
+
+        let users = result;
+
+        return {
+
+            status : 200, result : users
+        };
+
+    } catch (error) {
+        
+        console.log(error);
+
+        return {
+
+            status: 500, result: error
+        };
+    }
+};
+
 
 

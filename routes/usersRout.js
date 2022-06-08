@@ -75,4 +75,14 @@ router.get('/moradaUser/:id', async function(req, res, next){
     res.status(object.status).send(object.result);
 });
 
+router.get('/getExplicadores', async function (req, res, next){
+
+    console.log('sending all explicadores...');
+
+    let object = await umodel.getExp();
+
+    res.status(object.status).send(object.result);
+
+});
+
 module.exports = router;
